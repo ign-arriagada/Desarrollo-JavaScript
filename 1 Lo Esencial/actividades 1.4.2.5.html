@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tercer JSON</title>
+</head>
+<body>
+
+<button onclick="listarPersonas()">Listar todos</button>
+<button onclick="listarMayoresDeEdad()">Listar mayores de edad</button>
+<button onclick="sumarEdades()">sumar edades</button>
+<p id="personas"></p>
+</body>
+<script type="text/javascript">
+	var jsonText = '{"personas":['+
+					'{"nombre":"meliodas", "edad":"3500"},'+
+					'{"nombre":"Ignacio", "edad":"30"},'+
+					'{"nombre":"lukas", "edad":"12"},'+
+					'{"nombre":"isabella", "edad":"6"},'+
+					'{"nombre":"maite", "edad":"4"},'+
+					'{"nombre":"valentina", "edad":"25"},'+
+					'{"nombre":"ivan", "edad":"38"},'+
+					'{"nombre":"paola", "edad":"29"},'+
+					'{"nombre":"pedro", "edad":"18"},'+
+					'{"nombre":"julian", "edad":"2"},'+
+					'{"nombre":"naruto", "edad":"23"}'+ ']}';
+	var json = JSON.parse(jsonText);
+ 
+	function listarPersonas() {
+		var out = "-------------Personas-------------<br>";
+		var i;
+		for (i = 0; i < json.personas.length; i++) {
+			out+= "Nombre: "+json.personas[i].nombre+"- Edad: "+ json.personas[i].edad + "<br>";
+		}
+		document.getElementById("personas").innerHTML = out;
+	}
+
+	function listarMayoresDeEdad() {
+		var out = "------Personas Mayores------<br>";
+		var i;
+		for (i = 0; i < json.personas.length; i++) {
+			if(json.personas[i].edad >= 18){
+				out+= "Nombre: "+json.personas[i].nombre+"- Edad: "+ json.personas[i].edad + "<br>";	
+			}
+			
+		}
+		document.getElementById("personas").innerHTML = out;
+	}
+
+	function sumarEdades(){
+		var out = 0;
+		for (var i = 0; i < json.personas.length; i++) {
+			out += parseInt(json.personas[i].edad);
+		}
+		document.getElementById("personas").innerHTML = "La edad de todos sumadas es: "+out;
+	}
+	
+</script>
+</html>

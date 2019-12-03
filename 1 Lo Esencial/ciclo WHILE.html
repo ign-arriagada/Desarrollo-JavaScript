@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ciclo WHILE</title>
+</head>
+<body>
+	<h1>ciclo While</h1>
+	<p id="salida"></p>
+	<button onclick="conteo()">Iniciar conteo</button>
+</body>
+<script type="text/javascript">
+	function conteo(){
+		var contador = 1;
+		var texto = "";
+
+		while (contador <= 50){
+			texto += contador + "<br>";
+			contador++;
+		}
+		document.getElementById("salida").innerHTML = texto;
+	}
+
+</script>
+</html>

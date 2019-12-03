@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>6.3</h1>
+	<p id="propiedades"></p>
+	<button onclick="mostrarPropiedades()">Mostrar propiedades</button>
+	<br>
+	<br>
+	<h1>6.4</h1>
+	<p id="propEstudiante"></p>
+	<button onclick="datosEstudiante()">Mostrar Promedio</button>
+</body>
+<script type="text/javascript">
+
+	function Estudiante (codigo,nombre,nota1,nota2){
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.nota1 = nota1;
+		this.nota2 = nota2;
+
+		this.promedio = function () {
+			document.getElementById("propEstudiante").innerHTML = "Soy "+ this.nombre + " y mi promedio es " + ((this.nota1 + this.nota2)/2);
+		}
+	}
+	var estudiante = new Estudiante ("001", "Valentina", 1.3, 7.0);
+
+	function datosEstudiante(){
+		estudiante.promedio();
+	}
+
+	//6.3
+	function Producto (codigo, nombre, cantidad, precio){
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.cantidad = cantidad;
+		this.precio = precio;
+
+		this.mostrar = function(){
+			document.getElementById("propiedades").innerHTML = "Codigo: "+this.codigo+"<br> Nombre: "+this.nombre +"<br> Cantidad: "+this.cantidad + "<br> Precio: $"+this.precio;
+		};
+	}
+
+	var producto = new Producto("001","Mouse", 13, 6000);
+	//debugger;
+	function mostrarPropiedades(argument){
+		producto.mostrar();
+	}
+</script>
+</html>

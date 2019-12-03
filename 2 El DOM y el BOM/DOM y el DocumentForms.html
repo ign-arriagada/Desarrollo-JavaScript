@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function numeroForms(){
+			document.getElementById("numero").innerHTML = "Numero de forms "+ document.forms.length;
+		}
+	</script>
+</head>
+<body>
+	<form name="form1"></form>
+	<form name="form2"></form>
+	<form name="form3"></form>
+	<form name="form4"></form>
+	<div id="numero"></div>
+	<button onclick="numeroForms()">numero de forms</button>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>Producto</td>
+			<td>Precio</td>
+			<td>Cantidad</td>
+			<td>Subtotal</td>
+		</tr>
+		<tr>
+			<td>Camisa</td>
+			<td><input type="text" id="precio_camisa" value="30000" disabled="true"></td>
+			<td><input type="text" id="cant_camisa" value=""></td>
+			<td><input type="text" id="subt_camisa" value="" disabled="true"></td>
+		</tr>
+		<tr>
+			<td>Gorra</td>
+			<td><input type="text" id="precio_gorra" value="50000" disabled="true"></td>
+			<td><input type="text" id="cant_gorra"></td>
+			<td><input type="text" id="subt_gorra" value="" disabled="true"></td>
+		</tr>
+		<tr>
+			<td>Zapatos</td>
+			<td><input type="text" id="precio_zapatos" value="60000" disabled="true"></td>
+			<td><input type="text" id="cant_zapatos"></td>
+			<td><input type="text" id="subt_zapatos" value="" disabled="true"></td>
+		</tr>
+		<tr>
+			<td>Pantalón</td>
+			<td><input type="text" id="precio_pantalon" value="80000" disabled="true"></td>
+			<td><input type="text" id="cant_pantalon"></td>
+			<td><input type="text" id="subt_pantalon" value="" disabled="true"></td>
+		</tr>
+	</table>
+	<button onclick="calc_subt()">Calcular Subtotales</button>
+	<button onclick="calc_total()">Total Compra</button>
+	<p id="total">Total compra:</p><br>
+	<script type="text/javascript">
+		function calc_subt(){
+			document.getElementById("subt_camisa").value = parseInt(document.getElementById("precio_camisa").value) * parseInt(document.getElementById("cant_camisa").value);
+			document.getElementById("subt_gorra").value = parseInt(document.getElementById("precio_gorra").value) * parseInt(document.getElementById("cant_gorra").value);
+			document.getElementById("subt_zapatos").value = parseInt(document.getElementById("precio_zapatos").value) * parseInt(document.getElementById("cant_zapatos").value);
+			document.getElementById("subt_pantalon").value = parseInt(document.getElementById("precio_pantalon").value) * parseInt(document.getElementById("cant_pantalon").value);
+			
+
+		}
+
+		function calc_total(){
+			console.log("camisa "+parseInt(document.getElementById('subt_camisa').value));
+			console.log("gorra "+parseInt(document.getElementById("subt_gorra").value));
+			console.log("zapatos "+parseInt(document.getElementById("subt_zapatos").value));
+			console.log("pantlon "+parseInt(document.getElementById("subt_pantalon").value));
+			var total = parseInt(document.getElementById("subt_camisa").value) + parseInt(document.getElementById("subt_gorra").value) + parseInt(document.getElementById("subt_zapatos").value) + parseInt(document.getElementById("subt_pantalon").value);
+			document.getElementById("total").innerHTML = "El total es :" + total;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function agregarElemento(){
+			var encabezado4 = document.createElement("h1");
+			var texto = document.createTextNode("Mi texto 4"); //permite crear un nodo de tipo texto
+			encabezado4.appendChild(texto);
+			document.getElementById("miDiv").appendChild(encabezado4);
+		}
+	</script>
+</head>
+<body>
+	<div id="miDiv">
+		<h1>mi texto1</h1>
+		<h1>mi texto2</h1>
+		<h1>mi texto3</h1>
+	</div>
+	<button onclick="agregarElemento()">agregar elemento</button>
+</body>
+</html>

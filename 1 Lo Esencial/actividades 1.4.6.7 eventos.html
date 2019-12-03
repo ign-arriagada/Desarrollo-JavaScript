@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="alCargar()">
+	<center>
+		<h1>Hoja de Vida</h1>
+	</center>
+	<form onreset="alReset()">
+		<h2>Informacion Personal</h2>
+		<p>
+			Nombres: <input type="text" id="nombres" onchange="aMayus('nombres')"> <br>
+			Apellidos: <input type="text" id="apellidos" onchange="aMayus('apellidos')"> <br>
+			Dirección: <input type="text" id="direccion"> <br>
+			Edad: <input type="text" id="edad" name=""> <br>
+			Fecha de Nacimiento <input type="text" id="fechaNacimiento" alt="dd/mm/yyyy"> <br>
+			Lugar de Nacimiento <input type="text" id="lugarNacimiento" name=""> <br>
+			Estado Civil <input type="text" id="estadoCivil" name="">
+		</p>
+	
+		<h2>Informacion Academica</h2>
+		<p>
+			Universidad: <input type="text" id="universidad" name=""> <br>
+			Profesion: <input type="text" id="profesion" name=""> <br>
+			Observaciones: <br>
+			<textarea name="observaciones" rows="10" cols="40" onselect="selectTexto()">Observaciones</textarea>
+		</p>
+		<input type="submit" onclick="alEnviar()" value="Enviar" name="">
+		<input type="reset" value="Restablecer" name="">
+
+	</form>
+	
+</body>
+<script type="text/javascript">
+	/*
+		Implementar los eventos onClick, OnLoad, OnSelect, OnChange, OnReset, para realizar las siguientes acciones sobre el formulario:
+
+Borrar todo el contenido que se encuentre en los componentes del formulario y mostrar un mensaje que diga “Se ha restablecido el Texto” cuando se haga clic en el botón Restablecer.
+	*/
+
+	function alCargar(){
+		//alert("Bienvenido a su formato de Hoja de Vida");
+	}
+
+	function alEnviar(){
+		alert("Su Hoja de Vida ha Sido Guardada Correctamente");
+	}
+
+	function selectTexto(){
+		alert("ha seleccionado el texto");
+	}
+
+	function aMayus(string){
+		var x = document.getElementById(string);
+		x.value = x.value.toUpperCase();
+	}
+	
+	function alReset(){
+		alert("Se ha restablecido el Texto");
+	}
+
+
+
+</script>
+</html>

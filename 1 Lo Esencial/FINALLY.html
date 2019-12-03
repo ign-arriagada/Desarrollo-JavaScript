@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FINALLY </title>
+</head>
+<body>
+	<h1>FINALLY</h1>
+	<p id="mensaje"></p>
+	<button onclick="miFuncion1()">Funcion1</button>
+</body>
+<script type="text/javascript">
+	function miFuncion1(){
+		try{
+			var edad = 60;
+			calcular(edad); //funcion calcular no está definida
+		} catch (error){
+			alert("Existe un error "+ error.message);
+		} finally {
+			document.getElementById("mensaje").innerHTML = "Seguimos pese al error";
+		}
+	}
+</script>
+</html>

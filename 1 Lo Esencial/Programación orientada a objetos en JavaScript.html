@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POO en JS</title>
+</head>
+<body>
+	<h1>POO Javascript</h1>
+	<p id="saludo1"></p>
+	<p id="saludo2"></p>
+
+	<button onclick="miFuncion1()">Saludo1</button>
+	<button onclick="miFuncion2()">Saludo2</button>
+</body>
+<script type="text/javascript">
+	function Persona (nombre, edad, ciudad, email){ //Definicion de la clase persona
+		//seteo de los atributos de la clase persona con los parametros recibidos.
+		this.nombre = nombre;
+		this.edad = edad;
+		this.ciudad = ciudad;
+		this.email = email;
+
+		//Metodo saludar() propio de la clase persona
+		this.saludar = function(){
+			document.getElementById("saludo1").innerHTML = "Hola mi nombre es "+ this.nombre + "y mi edad es " + this.edad; 
+		};
+	}
+
+	var persona = new Persona("Carlos", "24", "Santiago", "correo@gmail.com"); //Creacion de un objeto Persona
+
+	function miFuncion1(argunment){
+		persona.saludar();
+	}
+
+	function miFuncion2(argunment){
+		//acceso a los atributos del objeto persona 
+		document.getElementById("saludo2").innerHTML = "Soy de " + persona.ciudad + " y mi email es " + persona.email;
+	}
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<a href="www.gooogle.com" target="_blank" name="google">Google</a>
+	<br>
+	<a href="www.youtube.com" target="_blank" name="youtube">youtube</a>
+	<br>
+	<a href="www.facebook.com" target="_blank" name="facebook">facebook</a>
+	<br>
+	<a href="www.instagram.com" target="_blank" name="instagram">instagram</a>
+	<br>
+	<div id="numero"></div>
+	<button onclick="numeroAnclas()">total de Anclas</button>
+</body>
+<script type="text/javascript">
+	function numeroAnclas(){
+		document.getElementById("numero").innerHTML = "Numero de elementos A " + document.anchors.length;
+	}
+</script>
+</html>

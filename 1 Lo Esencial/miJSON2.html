@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>segundo JSON</title>
+</head>
+<body>
+<p id="empresas"></p>
+</body>
+<script type="text/javascript">
+	var jsonText = '{"empresas":['+
+					'{"rut":"3421-1", "nombre":"WOM", "telefono":"1234567", "email":"correo@gmail.com"},'+
+					'{"rut":"8292-4", "nombre":"Japi Jane", "telefono":"8392749", "email":"japijane@gmail.com"},'+
+					'{"rut":"4242-7", "nombre":"Netflix", "telefono":"9876543", "email":"Netflix@gmail.com"},'+
+					'{"rut":"9246-6", "nombre":"Kuervos del Sur", "telefono":"9871332", "email":"kuervos@delsur.com"},'+
+					'{"rut":"5921-2", "nombre":"HP", "telefono":"10274927", "email":"HP@gmail.com"},'+
+					'{"rut":"9461-8", "nombre":"DBLUE", "telefono":"1539153", "email":"DBLUE@gmail.com"},'+
+					'{"rut":"2942-3", "nombre":"HUAWEI", "telefono":"4292032", "email":"HUAWEI@gmail.com"}'+ ']}';
+	var jsObj = JSON.parse(jsonText);
+ 
+	function leerJSON(json) {
+		var out = "-------------Empresas-------------<br>";
+		var i;
+		for (i = 0; i < json.empresas.length; i++) {
+			out+= "RUT: "+json.empresas[i].rut+"- Nombre: "+ json.empresas[i].nombre + "- telefono: "+ json.empresas[i].telefono + "- Email: "+ json.empresas[i].email + "<br>";
+		}
+		document.getElementById("empresas").innerHTML = out;
+	}
+	
+	leerJSON(jsObj);
+
+</script>
+</html>

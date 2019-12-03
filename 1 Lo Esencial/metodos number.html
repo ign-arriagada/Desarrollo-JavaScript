@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+	</HEAD>
+	
+	<BODY>
+		<h1>Numbers </h1>
+		
+		<p id="n1"></p>
+		<p id="n2"></p>
+		
+		<h1>number propiedades</h1>
+		<p id="n3"></p>
+		<p id="n4"></p>
+		<p id="n5"></p>
+		<p id="n6"></p>
+		<p id="n7"></p>
+		<p id="n8"></p>
+		<p id="n9"></p>
+		<h1>metodos number</h1>
+		<p id="n10"></p>
+		<p id="n11"></p>
+		<p id="n12"></p>
+		<p id="n13"></p>
+		<p id="n14"></p>
+		<p id="n15"></p>
+		
+	</BODY>
+	<SCRIPT>
+//Definicion de numbers
+
+var numero1= 2500; //numero entero
+var numero2= 34.290; //numero con decimales
+
+document.getElementById("n1").innerHTML = numero1;
+document.getElementById("n2").innerHTML = numero2;
+
+//Propiedades de numbers
+
+var numero3 = 23434;
+document.getElementById("n3").innerHTML = numero3.contructor; //propiedad constructor retorna la funcion nativa que crea un numero
+
+document.getElementById("n4").innerHTML = Number.MAX_VALUE; //valor maximo que se puede usar en javascript
+document.getElementById("n5").innerHTML = Number.MIN_VALUE; //valor minimo que se puede usar en javascript
+document.getElementById("n6").innerHTML = Number.NEGATIVE_INFINITY; //retorna un negativo infinito.
+document.getElementById("n7").innerHTML = Number.NaN; //retorna un numero ilegal o no definido
+document.getElementById("n8").innerHTML = Number.POSITIVE_INFINITY; //retorna un positivo infinito.
+
+Number.prototype.metodoNumerico = function() {//la propiedad prototype crea un metodo para manipular numeros
+	return this*4/2;
+}
+
+var numero4 = 25;
+
+document.getElementById("n9").innerHTML = numero4.metodoNumerico();
+
+//metodos numbers
+
+var numero5 = 26.57;
+document.getElementById("n10").innerHTML = numero5.toExponential(); // convierte un numero a expresion exponencial.
+
+var numero6 = 14.76373829;
+document.getElementById("n11").innerHTML = numero6.toFixed(3); //recorta el numero de digitos de un numero y lo convierte en string
+
+var numero7 = 23.5567;
+document.getElementById("n12").innerHTML = numero7.toPrecision(2);// da formato a un numero para una longitud de numero n 
+
+var numero8 = 3.1416;
+document.getElementById("n13").innerHTML = numero8.toString(); //convierte la variable en string
+
+var numero10 = 5000;
+document.getElementById("n14").innerHTML = numero10.valueOf(); // devuelve el valor simple de un numero.
+
+
+
+
+
+
+
+
+
+
+	
+	</SCRIPT>
+</HTML>

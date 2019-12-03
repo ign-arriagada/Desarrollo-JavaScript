@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<h1>Global Object</h1>
+	
+	<p id="g1"></p>
+	<p id="g2"></p>
+	
+	<h1>Metodos</h1>
+	
+	<p id="g3"></p>
+	<p id="g4"></p>
+	<p id="g5"></p>
+	<p id="g6"></p>
+	<p id="g7"></p>
+	<p id="g8"></p>
+	<p id="g9"></p>
+	<p id="g10"></p>
+	<p id="g11"></p>
+	
+</body>
+
+<script>
+
+//Global Object
+
+var a;// Undefined
+var b = a + 2; // NaN
+
+document.getElementById("g1").innerHTML = a;
+document.getElementById("g2").innerHTML = b;
+
+//Metodos
+
+//parseInt convierte un string en numero entero.
+
+var c = parseInt("2.25");//2
+var d = parseInt("1 Next university"); // 1
+var e = parseInt("Next university"); //NaN
+
+//parseFloat convierte un string en numero decimal.
+
+var f = parseFloat("3.1416"); // 3.1416
+var g = parseFloat("2.2342 Hola"); // 2.2342
+var h = parseFloat("texto vario 2.912929"); // NaN
+
+var uri = "https://learn.nextu.com/mod/lesson/view.php?id=601&pageid=826&pid=P_JAVASCRIPT";
+var uriEnc = encodeURIComponent(uri);// encodeURIComponent codifica una url
+var uriDec = decodeURIComponent(uri);// decodeURIComponent decodifica una url
+
+
+document.getElementById("g3").innerHTML = c;
+document.getElementById("g4").innerHTML = d;
+document.getElementById("g5").innerHTML = e;
+document.getElementById("g6").innerHTML = f;
+document.getElementById("g7").innerHTML = g;
+document.getElementById("g8").innerHTML = h;
+document.getElementById("g9").innerHTML = uri;
+document.getElementById("g10").innerHTML = uriEnc;
+document.getElementById("g11").innerHTML = uriDec;
+
+	
+</script>
+</html>
+
+
+
+
+
+

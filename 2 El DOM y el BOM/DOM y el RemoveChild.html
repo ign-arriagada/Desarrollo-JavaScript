@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function abortar(){
+			var miDiv = document.getElementById("miDiv");
+			//alert(miDiv);
+			miDiv.removeChild(miDiv.childNodes[0]);//Se invoca el metodo removeChild, recibe el nodo hijo a eliminar.
+		}
+	</script>
+</head>
+<body>
+	<div id="miDiv">
+		<h1>feto ingeniero</h1>
+		<h1>segundo feto</h1>
+		<h2>tercer feto</h2>
+	</div>
+	<button onclick="abortar()">abortar</button>
+</body>
+</html>

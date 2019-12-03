@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>getElementById</title>
+</head>
+<body>
+	<div id="primerDiv">
+		<p>Next University</p>
+	</div>
+	<p id="texto"></p>
+	<script type="text/javascript">
+		var elemento = document.getElementById("primerDiv");
+		document.getElementById("texto").innerHTML = elemento; //[object HTMLDivElement] devuelve el tipo de etiqueta, si no se usan metodos o propiedades, devuelve el tipo de etiqueta.
+		//alert(elemento);
+	</script>
+
+</body>
+</html>

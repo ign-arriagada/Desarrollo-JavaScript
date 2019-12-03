@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>THROW</h1>
+	<button onclick="miFuncion1()">Funcion 1</button>
+	<button onclick="miFuncion2()">Funcion 2</button>
+</body>
+<script type="text/javascript">
+	function miFuncion1(){
+		try{
+			var mensaje = "Esto es un mensaje desde javascript"
+			if(isNaN(parseInt(mensaje))){
+				throw "Parametro pasado al mentodo parseInt no es un numero";
+			}
+		} catch (error){
+			alert("Existe un error "+error);
+		}
+	}
+
+	function miFuncion2(){
+		try{
+			var res = 45/0;
+			if (res == Infinity ){
+				throw "Division entre 0 no es valida";
+			}
+
+		} catch (error){
+			alert ("Existe un error :"+ error);
+		}
+	}
+</script>
+</html>

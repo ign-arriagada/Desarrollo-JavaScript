@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3 id="texto1">Navegando entre nodos</h3>
+	<p id="texto2">Hola Mundo</p>
+	<script type="text/javascript">
+		var cambiartexto = document.getElementById("texto1").childNodes[0].nodeValue;
+		document.getElementById("texto2").innerHTML = cambiartexto;
+	</script>
+</body>
+</html>

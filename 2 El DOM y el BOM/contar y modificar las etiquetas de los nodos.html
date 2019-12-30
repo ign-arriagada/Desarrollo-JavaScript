@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>primer elemento p</p>
+	<p>segundo elemento p</p>
+	<p>tercer elemento p</p>
+	<p>cuarto elemento p</p>
+	<p>quinto elemento p</p>
+	<p>sexto elemento p</p>
+	<button onclick="numeroDeParrafos()">Numero de parrafos</button>
+	<button onclick="cambiarParrafos()">Cambiar parrafos</button>
+
+	<script type="text/javascript">
+		function numeroDeParrafos(){
+			var listaParrafos = document.getElementsByTagName("p");
+			var numeroDeParrafos = listaParrafos.length;
+			alert("el numero de parrafos es: " +numeroDeParrafos)
+		}
+
+		function cambiarParrafos(){
+			document.getElementsByTagName("p")[0].style.background = "orange";
+			document.getElementsByTagName("p")[0].style.fontSize = "x-large";
+
+			document.getElementsByTagName("p")[1].style.background = "red";
+			document.getElementsByTagName("p")[1].style.fontSize = "large";
+
+			document.getElementsByTagName("p")[0].style.background = "orange";
+			document.getElementsByTagName("p")[0].style.fontSize = "x-large";
+
+
+		}
+	</script>
+</body>
+</html>

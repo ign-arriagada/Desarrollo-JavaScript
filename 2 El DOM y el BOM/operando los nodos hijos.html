@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function nodosHijos(){
+			var texto ="";
+			var div = document.getElementsByTagName("div")[0];
+			for (var i = 0; i < div.childNodes.length; i++) { //recorrer arreglo de nodos
+				texto += div.childNodes[i].nodeName + "<br>"; //concatenar el nombre de los nodos hijos  a la variable texto
+			}
+			document.getElementById("mensaje").innerHTML = texto;
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<p>parrafo 1</p>
+		<p>parrafo 2</p>
+		<p>parrafo 3</p>
+	</div>
+	<button onclick="nodosHijos()">nodos hijos</button>
+	<p id="mensaje"></p>
+</body>
+</html>

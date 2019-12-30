@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button id="boton1">Mostrar</button>
+<script type="text/javascript">
+	var nombre = "Ignacio Arriagada";
+	var estatura = 1.69;
+
+	document.getElementById("boton1").addEventListener("click",function(){
+		saludar(nombre,estatura);
+	});
+
+	function saludar(nombre,estatura){
+		alert("Hola " + nombre + " y mides " + estatura);
+	}
+
+</script>
+</body>
+</html>

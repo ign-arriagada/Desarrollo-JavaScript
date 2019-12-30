@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>Primer div</div>
+	<div>Segundo div</div>
+	<div>Tercero div</div>
+	<div>Cuarto div</div>
+	<div>Quinto div</div>
+	<button onclick="cambiarColor()">Cambiar Divs</button>
+
+	<script type="text/javascript">
+		function cambiarColor(){
+			var listaNodos = document.getElementsByTagName("div");
+			for (var i = 0; i < listaNodos.length; i++) {
+				listaNodos[i].style.background = "green";
+			}
+		}
+	</script>
+</body>
+</html>

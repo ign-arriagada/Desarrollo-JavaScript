@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<button id="boton1">Mostar Alert</button>
+	<script type="text/javascript">
+		var elemento = document.getElementById("boton1");
+		elemento.addEventListener("click",mostrarMensaje1);
+		elemento.addEventListener("mouseover",mostrarMensaje2);
+
+		function mostrarMensaje1(argument){
+			alert("EventListener 1");
+		}
+
+		function mostrarMensaje2(argument){
+			alert("EventListener 2");
+		}
+	</script>
+	</body>
+	</html>	

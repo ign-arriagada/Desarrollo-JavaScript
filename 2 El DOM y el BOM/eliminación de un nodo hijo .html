@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="parrafo">
+		<a href="#" id="e1">Primer enlace</a>
+		<br><a href="#" id="e2">Segundo enlace</a>
+	</p>
+	<script type="text/javascript">
+		var nodo_padre = document.getElementById("parrafo");
+		var nodo_hijo = document.getElementById("e1");
+
+		nodo_padre.removeChild(nodo_hijo);
+	</script>
+</body>
+</html>

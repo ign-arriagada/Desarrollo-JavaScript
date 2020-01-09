@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="alerta3()">
+	<h2>Cuadro prompt</h2>
+	<p id="mensaje"></p>
+	<script type="text/javascript">
+		function alerta3() {
+			var edad = prompt("Digite su edad");
+			if (edad != null) {
+				document.getElementById("mensaje").innerHTML = "La edad ingresada es: " + edad;
+			}
+			
+		}
+	</script>
+</body>
+</html>

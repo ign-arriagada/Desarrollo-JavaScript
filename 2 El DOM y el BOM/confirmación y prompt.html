@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body onload="confirmar()">
+	<p id="mensaje"></p>
+	<script type="text/javascript">
+		function confirmar(){
+			if(confirm("Permite realizar una serie de preguntas?") == true){
+				preguntas();
+			}
+		}
+
+		function preguntas(){
+			var nombre = prompt("Cual es su nombre?");
+			var apellido = prompt("Cual es su apellido?");
+			var edad = prompt("Cual es su edad?");
+			var ciudad = prompt("Cual es su ciudad?");
+			var estadoCivil = prompt("Cual es su estado Civil?");
+			var profesion = prompt("Cual es su profesion?");
+			var ciudad = prompt("Cual es su ciudad?");
+			var universidad = prompt("Cual es su universidad?");
+			
+			if(nombre != null){
+				document.getElementById("mensaje").innerHTML =
+				"Nombre: " + nombre + "<br>"+
+				"apellido: " + apellido + "<br>"+
+				"edad: " + edad + "<br>"+
+				"ciudad: " + ciudad + "<br>"+
+				"estado Civil: " + estadoCivil + "<br>"+
+				"profesion: " + profesion + "<br>"+
+				"ciudad: " + ciudad + "<br>"+
+				"universidad: " + universidad + "<br>";
+
+			}
+		}
+	</script>
+
+</body>
+</html>

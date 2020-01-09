@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="navegador()">
+	<h2>Navegador del BOM</h2>
+	<p id="mensaje"></p>
+	<script type="text/javascript">
+		function navegador(){
+			document.getElementById("mensaje").innerHTML =
+			"Nombre: " + navigator.appName + "<br>"+
+			"Versión: " + navigator.appVersion + "<br>"+
+			"Lenguaje: " + navigator.language + "<br>"+
+			"Navegador en linea: " + navigator.onLine + "<br>"+
+			"Java habilitado: " + navigator.javaEnabled + "<br>";
+
+		}
+	</script>
+</body>
+</html>

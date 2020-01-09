@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body onload="confirmar()">
+	<h1>Registro de informacion</h1>
+	<script type="text/javascript">
+		function confirmar(){
+			if(confirm("Desea ingresar a la pagina?")){
+
+			}
+		}
+
+		function datos(){
+			var d1 = document.getElementById("nombre").value;
+			var d2 = document.getElementById("apellido").value;
+			var d3 = document.getElementById("sexo").value;
+			var d4 = document.getElementById("edad").value;
+			var d5 = document.getElementById("fechaNacimiento").value;
+			var d6 = document.getElementById("nacionalidad").value;
+			alert("Usuario registrado");
+			alert("nombre "+ d1 + " " + d2 + " de sexo " + d3 +", con " + d4 + " años de edad, nacio el " + d5 + " y es de "+d6);
+		}
+	</script>
+
+	Nombre: <input type="text" name="nombre" id="nombre"> <br>
+	Apellido: <input type="text" name="apellido" id="apellido"> <br>
+	Sexo: <input type="text" name="sexo" id="sexo"> <br>
+	Edad: <input type="text" name="edad" id="edad"> <br>
+	Fecha de nacimento: <input type="date" name="fechaNacimiento" id="fechaNacimiento"> <br>
+	Pais de origen: <input type="text" name="nacionalidad" id="nacionalidad"> <br>
+	<input type="button" onclick="datos()" value="Registrar" name="">
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	Ingrese su edad<input type="text" name="" id="edad">
+	<br>
+	<button onclick="guardarEdad()">Guardar edad</button>
+	<br>
+	<button onclick="mostrarEdad()">mostrar edad guardada</button>
+	<p id="mensaje"></p>
+
+	<script type="text/javascript">
+		//No funciona en chrome
+		function guardarEdad(){
+			document.cookie = "edad="+ document.getElementById("edad").value;
+			console.log("Edad: " + document.getElementById("edad").value);
+		}
+
+		function mostrarEdad(){
+			//var cookie = document.cookie;
+			//console.log("listaCookies" + cookie);
+
+			var cookie = document.cookie;
+			console.log("listaCookies" + cookie);
+
+			var listaCookies = cookie.split(";");
+			var micookie = "";
+			for (var i = 0; i < listaCookies.length; i++) {
+				busca = listaCookies[i].search("edad");
+				if (busca > -1) {
+    				micookie=listaCookies[i]
+    			}
+			}
+			
+    		var separador = micookie.indexOf("=");
+    		document.getElementById("mensaje").innerHTML = "Su edad guardada en la cookie es: " + micookie.substring(separador+1);
+		}
+	</script>
+
+
+</body>
+</html>

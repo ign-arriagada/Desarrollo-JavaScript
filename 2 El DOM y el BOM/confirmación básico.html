@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="confirmar()">
+	<script type="text/javascript">
+		function confirmar(){
+			if(confirm("Desea ingresar?") == true){
+				preguntas();
+			} else {
+				alert("no quiso responder")
+			}
+
+
+		}
+
+		function preguntas(){
+			var nombre = prompt("Como te llamas?");
+			alert("Bienvenido " + nombre);
+		}
+	</script>
+</body>
+</html>
